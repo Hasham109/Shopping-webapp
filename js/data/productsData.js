@@ -1,0 +1,553 @@
+window.DEFAULT_PRODUCTS = [
+  {
+    "id": "fruit-001",
+    "name": "Organic Apples",
+    "category": "Fruits",
+    "price": 3.49,
+    "unit": "per lb",
+    "emoji": "🍎",
+    "description": "Crisp and sweet organic Honeycrisp apples, perfect for snacking or baking.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-002",
+    "name": "Bananas",
+    "category": "Fruits",
+    "price": 0.69,
+    "unit": "per lb",
+    "emoji": "🍌",
+    "description": "Ripe, golden bananas packed with potassium and natural sweetness.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-003",
+    "name": "Navel Oranges",
+    "category": "Fruits",
+    "price": 4.99,
+    "unit": "per bag",
+    "emoji": "🍊",
+    "description": "Juicy, seedless navel oranges bursting with vitamin C.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-004",
+    "name": "Fresh Strawberries",
+    "category": "Fruits",
+    "price": 5.99,
+    "unit": "per box",
+    "emoji": "🍓",
+    "description": "Sweet, sun-ripened strawberries picked at peak freshness.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-005",
+    "name": "Fresh Blueberries",
+    "category": "Fruits",
+    "price": 4.49,
+    "unit": "per pint",
+    "emoji": "🫐",
+    "description": "Antioxidant-rich plump blueberries with a sweet, tangy burst.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-006",
+    "name": "Organic Mangoes",
+    "category": "Fruits",
+    "price": 2.29,
+    "unit": "each",
+    "emoji": "🥭",
+    "description": "Sweet and fragrant tropical mangoes with juicy, golden flesh.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-007",
+    "name": "Hass Avocados",
+    "category": "Fruits",
+    "price": 3.99,
+    "unit": "4-pack",
+    "emoji": "🥑",
+    "description": "Creamy Hass avocados, ideal for guacamole, toast, and fresh salads.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-008",
+    "name": "Seedless Watermelon",
+    "category": "Fruits",
+    "price": 6.99,
+    "unit": "whole",
+    "emoji": "🍉",
+    "description": "Sweet, refreshing, and deeply hydrating crisp red watermelon.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-009",
+    "name": "Red Seedless Grapes",
+    "category": "Fruits",
+    "price": 3.79,
+    "unit": "per lb",
+    "emoji": "🍇",
+    "description": "Crisp and juicy sweet red grapes, washed and ready to enjoy.",
+    "inStock": true
+  },
+  {
+    "id": "fruit-010",
+    "name": "Golden Pineapple",
+    "category": "Fruits",
+    "price": 3.99,
+    "unit": "each",
+    "emoji": "🍍",
+    "description": "Extra sweet tropical pineapple with vibrant aroma and juiciness.",
+    "inStock": true
+  },
+  {
+    "id": "veg-001",
+    "name": "Broccoli Crowns",
+    "category": "Vegetables",
+    "price": 2.49,
+    "unit": "per lb",
+    "emoji": "🥦",
+    "description": "Fresh, dark green broccoli crowns rich in fiber and vitamins.",
+    "inStock": true
+  },
+  {
+    "id": "veg-002",
+    "name": "Organic Carrots",
+    "category": "Vegetables",
+    "price": 1.99,
+    "unit": "per bunch",
+    "emoji": "🥕",
+    "description": "Crunchy organic carrots, great for salads, snacking, or cooking.",
+    "inStock": true
+  },
+  {
+    "id": "veg-003",
+    "name": "Baby Spinach",
+    "category": "Vegetables",
+    "price": 3.99,
+    "unit": "per bag",
+    "emoji": "🥬",
+    "description": "Tender baby spinach leaves, triple-washed and ready to eat.",
+    "inStock": true
+  },
+  {
+    "id": "veg-004",
+    "name": "Bell Peppers",
+    "category": "Vegetables",
+    "price": 1.49,
+    "unit": "each",
+    "emoji": "🫑",
+    "description": "Vibrant, crunchy bell peppers in assorted colors.",
+    "inStock": true
+  },
+  {
+    "id": "veg-005",
+    "name": "Vine Ripe Tomatoes",
+    "category": "Vegetables",
+    "price": 2.99,
+    "unit": "per lb",
+    "emoji": "🍅",
+    "description": "Sweet, juicy garden tomatoes ripened naturally on the vine.",
+    "inStock": true
+  },
+  {
+    "id": "veg-006",
+    "name": "English Cucumbers",
+    "category": "Vegetables",
+    "price": 1.79,
+    "unit": "each",
+    "emoji": "🥒",
+    "description": "Seedless, thin-skinned crisp cucumbers perfect for hydrating salads.",
+    "inStock": true
+  },
+  {
+    "id": "veg-007",
+    "name": "Russet Potatoes",
+    "category": "Vegetables",
+    "price": 4.49,
+    "unit": "5 lb bag",
+    "emoji": "🥔",
+    "description": "Versatile premium Russet potatoes for mashing, baking, and roasting.",
+    "inStock": true
+  },
+  {
+    "id": "veg-008",
+    "name": "Red Onions",
+    "category": "Vegetables",
+    "price": 1.69,
+    "unit": "per lb",
+    "emoji": "🧅",
+    "description": "Mildly pungent red onions with crisp texture and colorful layers.",
+    "inStock": true
+  },
+  {
+    "id": "veg-009",
+    "name": "Fresh Garlic Bulbs",
+    "category": "Vegetables",
+    "price": 1.99,
+    "unit": "3-pack",
+    "emoji": "🧄",
+    "description": "Aromatic, robust whole garlic bulbs to elevate every savory recipe.",
+    "inStock": true
+  },
+  {
+    "id": "veg-010",
+    "name": "Portobello Mushrooms",
+    "category": "Vegetables",
+    "price": 3.99,
+    "unit": "8 oz pack",
+    "emoji": "🍄",
+    "description": "Earthy, savory caps with a rich texture, great for grilling and sauteing.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-001",
+    "name": "Whole Milk",
+    "category": "Dairy",
+    "price": 4.29,
+    "unit": "per gallon",
+    "emoji": "🥛",
+    "description": "Farm-fresh whole milk with a rich, creamy taste.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-002",
+    "name": "Greek Yogurt",
+    "category": "Dairy",
+    "price": 5.49,
+    "unit": "per tub",
+    "emoji": "🫙",
+    "description": "Thick, protein-packed Greek yogurt with live active cultures.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-003",
+    "name": "Cheddar Cheese",
+    "category": "Dairy",
+    "price": 6.99,
+    "unit": "per block",
+    "emoji": "🧀",
+    "description": "Sharp cheddar cheese aged for bold, rich flavor.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-004",
+    "name": "Salted Butter",
+    "category": "Dairy",
+    "price": 4.99,
+    "unit": "per pack",
+    "emoji": "🧈",
+    "description": "European-style salted butter churned from fresh cream.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-005",
+    "name": "Grade A Large Eggs",
+    "category": "Dairy",
+    "price": 3.89,
+    "unit": "dozen",
+    "emoji": "🥚",
+    "description": "Farm-fresh pasture-raised grade A large brown eggs.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-006",
+    "name": "Almond Milk (Unsweetened)",
+    "category": "Dairy",
+    "price": 3.49,
+    "unit": "half gallon",
+    "emoji": "🥛",
+    "description": "Smooth, plant-based dairy-free almond milk fortified with vitamins.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-007",
+    "name": "Fresh Mozzarella Ball",
+    "category": "Dairy",
+    "price": 5.29,
+    "unit": "8 oz ball",
+    "emoji": "🧀",
+    "description": "Soft, delicate fresh mozzarella in water for Caprese and pizza.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-008",
+    "name": "Heavy Whipping Cream",
+    "category": "Dairy",
+    "price": 3.99,
+    "unit": "16 oz",
+    "emoji": "🥛",
+    "description": "Ultra-pasteurized rich cream for baking, sauces, and dessert topping.",
+    "inStock": true
+  },
+  {
+    "id": "dairy-009",
+    "name": "Organic Cottage Cheese",
+    "category": "Dairy",
+    "price": 4.19,
+    "unit": "16 oz tub",
+    "emoji": "🫙",
+    "description": "High-protein small curd cottage cheese with cultured cream.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-001",
+    "name": "Sourdough Bread",
+    "category": "Bakery",
+    "price": 5.49,
+    "unit": "per loaf",
+    "emoji": "🍞",
+    "description": "Artisan sourdough with a crispy crust and tangy, chewy interior.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-002",
+    "name": "Butter Croissants",
+    "category": "Bakery",
+    "price": 6.99,
+    "unit": "4-pack",
+    "emoji": "🥐",
+    "description": "Flaky, golden French croissants made with real butter.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-003",
+    "name": "Everything Bagels",
+    "category": "Bakery",
+    "price": 4.49,
+    "unit": "6-pack",
+    "emoji": "🥯",
+    "description": "Chewy bagels topped with sesame, poppy, garlic, and onion.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-004",
+    "name": "Blueberry Muffins",
+    "category": "Bakery",
+    "price": 7.49,
+    "unit": "4-pack",
+    "emoji": "🧁",
+    "description": "Moist, fluffy muffins bursting with fresh blueberries.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-005",
+    "name": "Artisan Garlic Baguette",
+    "category": "Bakery",
+    "price": 3.99,
+    "unit": "per baguette",
+    "emoji": "🥖",
+    "description": "Crisp French baguette baked with roasted garlic herb butter.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-006",
+    "name": "Cinnamon Swirl Rolls",
+    "category": "Bakery",
+    "price": 5.99,
+    "unit": "4-pack",
+    "emoji": "🥮",
+    "description": "Warm, gooey cinnamon rolls drizzled with rich vanilla glaze.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-007",
+    "name": "Chocolate Chip Cookies",
+    "category": "Bakery",
+    "price": 4.99,
+    "unit": "6-pack",
+    "emoji": "🍪",
+    "description": "Soft-baked gourmet cookies loaded with melted semi-sweet chocolate chunks.",
+    "inStock": true
+  },
+  {
+    "id": "bakery-008",
+    "name": "Whole Wheat Pita Bread",
+    "category": "Bakery",
+    "price": 3.29,
+    "unit": "6-pack",
+    "emoji": "🫓",
+    "description": "Pliable Mediterranean whole grain pocket pitas.",
+    "inStock": true
+  },
+  {
+    "id": "bev-001",
+    "name": "Orange Juice",
+    "category": "Beverages",
+    "price": 5.99,
+    "unit": "per bottle",
+    "emoji": "🧃",
+    "description": "100% pure squeezed orange juice with no added sugar.",
+    "inStock": true
+  },
+  {
+    "id": "bev-002",
+    "name": "Green Tea",
+    "category": "Beverages",
+    "price": 4.49,
+    "unit": "20 bags",
+    "emoji": "🍵",
+    "description": "Premium Japanese green tea with a smooth, refreshing taste.",
+    "inStock": true
+  },
+  {
+    "id": "bev-003",
+    "name": "Coffee Beans",
+    "category": "Beverages",
+    "price": 12.99,
+    "unit": "per bag",
+    "emoji": "☕",
+    "description": "Single-origin Arabica coffee beans, medium roast, whole bean.",
+    "inStock": true
+  },
+  {
+    "id": "bev-004",
+    "name": "Sparkling Water",
+    "category": "Beverages",
+    "price": 6.49,
+    "unit": "12-pack",
+    "emoji": "💧",
+    "description": "Naturally carbonated mineral water with a crisp, clean finish.",
+    "inStock": true
+  },
+  {
+    "id": "bev-005",
+    "name": "Organic Cold-Pressed Lemonade",
+    "category": "Beverages",
+    "price": 4.99,
+    "unit": "32 oz bottle",
+    "emoji": "🍋",
+    "description": "Zesty lemons sweetened with pure organic cane sugar.",
+    "inStock": true
+  },
+  {
+    "id": "bev-006",
+    "name": "Pure Coconut Water",
+    "category": "Beverages",
+    "price": 3.79,
+    "unit": "1 liter",
+    "emoji": "🥥",
+    "description": "Naturally electrolyte-rich coconut water harvested from young coconuts.",
+    "inStock": true
+  },
+  {
+    "id": "bev-007",
+    "name": "Mango Passionfruit Smoothie",
+    "category": "Beverages",
+    "price": 4.29,
+    "unit": "15.2 oz",
+    "emoji": "🥤",
+    "description": "Thick and vibrant tropical fruit blend packed with vitamins.",
+    "inStock": true
+  },
+  {
+    "id": "bev-008",
+    "name": "Cold Brew Coffee",
+    "category": "Beverages",
+    "price": 5.49,
+    "unit": "32 oz bottle",
+    "emoji": "🧊",
+    "description": "Steeped for 18 hours for an ultra-smooth, low-acidity coffee experience.",
+    "inStock": true
+  },
+  {
+    "id": "bev-009",
+    "name": "Organic Ginger Kombucha",
+    "category": "Beverages",
+    "price": 3.99,
+    "unit": "16 oz",
+    "emoji": "🍾",
+    "description": "Sparkling probiotic fermented tea with spicy ginger and lemon.",
+    "inStock": true
+  },
+  {
+    "id": "snack-001",
+    "name": "Trail Mix",
+    "category": "Snacks",
+    "price": 7.99,
+    "unit": "per bag",
+    "emoji": "🥜",
+    "description": "A hearty blend of almonds, cashews, raisins, and dark chocolate chips.",
+    "inStock": true
+  },
+  {
+    "id": "snack-002",
+    "name": "Dark Chocolate",
+    "category": "Snacks",
+    "price": 4.99,
+    "unit": "per bar",
+    "emoji": "🍫",
+    "description": "Rich 72% cacao dark chocolate, smooth and intensely flavorful.",
+    "inStock": true
+  },
+  {
+    "id": "snack-003",
+    "name": "Kettle Chips",
+    "category": "Snacks",
+    "price": 3.99,
+    "unit": "per bag",
+    "emoji": "🥔",
+    "description": "Thick-cut, crunchy kettle-cooked potato chips with sea salt.",
+    "inStock": true
+  },
+  {
+    "id": "snack-004",
+    "name": "Granola Bars",
+    "category": "Snacks",
+    "price": 5.49,
+    "unit": "6-pack",
+    "emoji": "🌾",
+    "description": "Chewy oat and honey granola bars with a touch of cinnamon.",
+    "inStock": true
+  },
+  {
+    "id": "snack-005",
+    "name": "Roasted Salted Almonds",
+    "category": "Snacks",
+    "price": 6.99,
+    "unit": "10 oz bag",
+    "emoji": "🌰",
+    "description": "Oven-roasted whole California almonds lightly dusted with sea salt.",
+    "inStock": true
+  },
+  {
+    "id": "snack-006",
+    "name": "White Cheddar Popcorn",
+    "category": "Snacks",
+    "price": 3.79,
+    "unit": "6 oz bag",
+    "emoji": "🍿",
+    "description": "Air-popped tender corn kernels tossed in real aged white cheddar.",
+    "inStock": true
+  },
+  {
+    "id": "snack-007",
+    "name": "Crispy Sourdough Pretzels",
+    "category": "Snacks",
+    "price": 4.29,
+    "unit": "12 oz bag",
+    "emoji": "🥨",
+    "description": "Traditional hard pretzel pieces with a satisfying bold crunch.",
+    "inStock": true
+  },
+  {
+    "id": "snack-008",
+    "name": "Organic Tortilla Chips",
+    "category": "Snacks",
+    "price": 3.99,
+    "unit": "10 oz bag",
+    "emoji": "🫓",
+    "description": "Stone-ground yellow corn tortilla chips with sea salt for salsa and dips.",
+    "inStock": true
+  },
+  {
+    "id": "snack-009",
+    "name": "Gourmet Gummy Bears",
+    "category": "Snacks",
+    "price": 3.49,
+    "unit": "8 oz bag",
+    "emoji": "🍬",
+    "description": "Assorted real fruit juice gummy bears with 12 distinct fruity flavors.",
+    "inStock": true
+  }
+]
+;
