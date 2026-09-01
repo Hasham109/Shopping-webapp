@@ -1,0 +1,17 @@
+{
+  "name": "freshcart",
+  "version": "1.0.0",
+  "description": "FreshCart — Premium Grocery Selling Application",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js"
+  },
+  "keywords": ["grocery", "ecommerce", "express"],
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.21.0",
+    "uuid": "^10.0.0"
+  }
+}
